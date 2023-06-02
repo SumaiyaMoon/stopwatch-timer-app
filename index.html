@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>StopWatch & Timer</title>
+    <!-- BootStrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <!-- BootStrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+<body>
+
+    <div class="container text-center">
+
+        <div class="row  my-5 flex-wrap d-flex gap-5 justify-content-center align-items-center">
+            <!-- StopWatch Start-->
+
+            <div class="col-md-4  border_boxes  p-5 m-2 rounded">
+                <div class="row d-flex justify-content-center align-items-center flex-column gap-5">
+                    <!-- Head -->
+                    <div class=" mb-5 rounded ">
+                        <h3 class="p-2 HEADING">StopWatch</h3>
+                    </div>
+                    <!-- Time -->
+                    <div class="m-auto rounded">
+                        <div class="row p-2">
+                            <div class="timer p-5 col text-center">
+                                <p><span id="displaySWhr">00</span><span>:</span><span id="displaySWmin">00</span><span>:</span><span id="displaySWsec">00</span></p>
+                                <p><span>hr</span><span>:</span><span>min</span><span>:</span><span>sec</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Buttons -->
+                    <div class=" mt-5 w-100">
+                        <div class="btn-group d-flex gap-2 p-2 justify-content-center align-items-center" role="group"
+                            aria-label="Basic example">
+                            <button type="button" onclick="startSW();" id="startBtnSW" class="btn buttonX rounded">Start<i
+                                    class="bi bi-play-circle-fill ms-3"></i></button>
+                            <button type="button" onclick="pauseSW();" id="pauseBtnSW" class="btn buttonX rounded">Pause<i
+                                    class="bi bi-pause-circle-fill ms-3"></i></button>
+                            <button type="button" onclick="resetSW();" id="resetBtnSW" class="btn buttonX rounded">Reset<i
+                                    class="bi bi-stop-circle-fill ms-3"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- StopWatch End -->
+
+
+            <!-- Timer Start-->
+
+            <div class="col-md-4  border_boxes  p-5 m-2 rounded">
+                <div class="row d-flex justify-content-center align-items-center flex-column gap-5">
+                    <!-- Head -->
+                    <div class=" mb-5 rounded ">
+                        <h3 class="p-2 HEADING">Timer</h3>
+                    </div>
+                    <!-- Time -->
+                    <div class="m-auto rounded">
+                        <div class="row p-2">
+                            <div class="timer p-5 col text-center">
+                                <p><span id="displayThr">00</span><span>:</span><span id="displayTmin">00</span><span>:</span><span id="displayTsec">00</span></p>
+                                <p><span>hr</span><span>:</span><span>min</span><span>:</span><span>sec</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Buttons -->
+                    <div class=" mt-5 w-100">
+                        <div class="btn-group d-flex gap-2 p-2 justify-content-center align-items-center" role="group"
+                            aria-label="Basic example">
+                            <button type="button" onclick="startT();" id="startBtnT" class="btn buttonX rounded">Start<i
+                                    class="bi bi-play-circle-fill ms-3"></i></button>
+                            <button type="button" onclick="pauseT();" id="pauseBtnT" class="btn buttonX rounded">Pause<i
+                                    class="bi bi-pause-circle-fill ms-3"></i></button>
+                            <button type="button" onclick="resetT();" id="resetBtnT" class="btn buttonX rounded">Reset<i
+                                    class="bi bi-stop-circle-fill ms-3"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Timer End -->
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+    <!-- BootStrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
