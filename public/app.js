@@ -26,9 +26,6 @@ startBtnT.disabled = false;
 pauseBtnT.disabled = true;
 resetBtnT.disabled = true;
 var hoursT , minutesT , secondsT;
-hoursT = 0;
-minutesT = 0;
-secondsT = 0;
 var intervalT ;
 
 
@@ -89,6 +86,13 @@ function resetSW(){
 
 
 //Timer Funcctionality
+function onClickTimerStartprompt(){
+//     var useTimer = prompt("Do you want to set Timer? or wanna use stopWatch","Timer/StopWatch")
+// useTimer = useTimer.toLowerCase();
+hoursT = +prompt("Enter Hours","00");
+minutesT = +prompt("Enter Minutes","00");
+secondsT = +prompt("Enter Seconds","00");
+}
 function renderValsT(){
     displayThr.innerHTML = hoursT;
     displayTmin.innerHTML =  minutesT;
@@ -127,10 +131,12 @@ function renderValsT(){
         renderValsT();
     }
     function startT(){
+
         startBtnT.disabled = true;
         resetBtnT.disabled = false;
         pauseBtnT.disabled = false;
         intervalT = setInterval(function(){
+        
             timerT();
         },1000)
     }
